@@ -59,3 +59,23 @@
 // };
 
 // console.log(countLetter('w3school.com'));
+
+// Напишите ф-ю которая принимает строку и возвращает количество гласных букв в строке
+// console.log(countOfVowels('The quick brown fox')) // 5
+// console.log(countOfVowels('Example string')) // 4
+// console.log(countOfVowels('Go to the editor')) // 6
+const countOfVowels = str => {
+  const arrVow = ['A', 'E', 'I', 'O', 'U', 'Y'];
+  const arrStr = str.split('');
+  let result = 0;
+  arrStr.forEach(element => {
+    arrVow.forEach(item => {
+      if (element.toUpperCase() === item) {
+        result += 1;
+      }
+    });
+  });
+  return result;
+};
+console.log(countOfVowels('The quick brown fox')); // 5
+console.log(countOfVowels('Example string')); // 4
