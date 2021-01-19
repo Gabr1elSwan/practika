@@ -1,4 +1,4 @@
-.circle {
+/* .circle {
   width: 100px;
   height: 100px;
   background-color: black;
@@ -11,5 +11,15 @@
 .square {
   position: relative;
 }
+ */
 
-
+.modal {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(204, 186, 186);
+  border: 1px solid red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
