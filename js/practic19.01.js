@@ -107,24 +107,24 @@
 // 5) Перепишите скрипт таким образом, чтобы движение квадрата
 // достигалось путем внесение данных в инпуты(оси Х / У, событие Сhange);
 
-const div = document.querySelector('.square');
+// const div = document.querySelector('.square');
 // const coord = {
 //   x: 0,
 //   y: 0,
 // };
 
-const x = document.querySelector("[name='X']");
-const y = document.querySelector("[name='Y']");
+// const x = document.querySelector("[name='X']");
+// const y = document.querySelector("[name='Y']");
 
 // console.log(x.Value, y.value);
 
-x.addEventListener('input', () => {
-  div.style.transform = `translate (${x.value}px, ${y.value}px)`;
-});
+// x.addEventListener('input', () => {
+//   div.style.transform = `translate (${x.value}px, ${y.value}px)`;
+// });
 
-x.addEventListener('input', () => {
-  div.style.transform = `translate (${x.value}px, ${y.value}px)`;
-});
+// x.addEventListener('input', () => {
+//   div.style.transform = `translate (${x.value}px, ${y.value}px)`;
+// });
 
 // function moveSquare(event) {
 //   if (event.code === 'ArrowUp') {
