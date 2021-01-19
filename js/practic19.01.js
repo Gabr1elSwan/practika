@@ -32,13 +32,131 @@
 //  Сделайте так, чтобы когда курсор мышки проходит над лишкой в неё подставлялась фамилия,
 //   а когда курсор уходит из области - всё возвращается в начальное состояние
 
-const ref = {
-  ul: document.querySelector('.list_names'),
-};
+// const ref = {
+//   ul: document.querySelector('.list_names'),
+// };
 
-function sername(event) {
-  console.log(event.target);
-  event.target.textContent += ' ' event.target.dataset.surname;
-}
+// function surname(event) {
+//   const currentName = event.target.textContent;
+//   const currentSurname = event.target.dataset.surname;
+//   console.log(event.target);
 
-ref.ul.addEventListener('mouseover', surname);
+//   event.target.textContent = currentName + ' ' + currentSurname;
+
+//   event.target.addEventListener('mouseleave', () => {
+//     event.target.textContent = currentName;
+//   });
+// }
+
+// ref.ul.addEventListener('mouseover', surname);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// / 3) напищите ф-цию которая создаст 10 квадратов с нумерацией внутри(стили в цсс),
+// при клике на квадрат должен выводиться алерт с его номером
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// arr.forEach(num => {
+//   const square = document.createElement('div');
+//   document.body.append(square);
+//   square.classList.add('square');
+//   square.textContent = num;
+// });
+
+// document.body.addEventListener('click', event => {
+//   if (event.target.nodeName === 'DIV') {
+//     alert(event.target.textContent);
+//   }
+// });
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 4) Напишите скрипт который будет двигать чёрный квадрат по заданной области
+// при нажатии на стрелки(верх, низ, лево, право)
+
+// const div = document.querySelector('.square');
+// const coord = {
+//   x: 0,
+//   y: 0,
+// };
+
+// function moveSquare(event) {
+//   if (event.code === 'ArrowUp') {
+//     coord.y -= 100;
+//   }
+//   if (event.code === 'ArrowDown') {
+//     coord.y += 100;
+//   }
+//   if (event.code === 'ArrowLeft') {
+//     coord.x -= 100;
+//   }
+//   if (event.code === 'ArrowRight') {
+//     coord.x += 100;
+//   }
+//   coord.x > 600 ? (coord.x = -650) : coord.x < -600 ? (coord.x = 600) : '';
+//   coord.y > 400 ? (coord.y = -400) : coord.y < -400 ? (coord.y = 400) : '';
+//   div.style.transform = `translate(${coord.x}px,${coord.y}px)`;
+//   console.log(event.code);
+// }
+
+// document.body.addEventListener('keydown', moveSquare);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 5) Перепишите скрипт таким образом, чтобы движение квадрата
+// достигалось путем внесение данных в инпуты(оси Х / У, событие Сhange);
+
+const div = document.querySelector('.square');
+// const coord = {
+//   x: 0,
+//   y: 0,
+// };
+
+const x = document.querySelector("[name='X']");
+const y = document.querySelector("[name='Y']");
+
+// console.log(x.Value, y.value);
+
+x.addEventListener('input', () => {
+  div.style.transform = `translate (${x.value}px, ${y.value}px)`;
+});
+
+x.addEventListener('input', () => {
+  div.style.transform = `translate (${x.value}px, ${y.value}px)`;
+});
+
+// function moveSquare(event) {
+//   if (event.code === 'ArrowUp') {
+//     coord.y -= 100;
+//   }
+//   if (event.code === 'ArrowDown') {
+//     coord.y += 100;
+//   }
+//   if (event.code === 'ArrowLeft') {
+//     coord.x -= 100;
+//   }
+//   if (event.code === 'ArrowRight') {
+//     coord.x += 100;
+//   }
+//   coord.x > 600 ? (coord.x = -650) : coord.x < -600 ? (coord.x = 600) : '';
+//   coord.y > 400 ? (coord.y = -400) : coord.y < -400 ? (coord.y = 400) : '';
+//   div.style.transform = `translate(${coord.x}px,${coord.y}px)`;
+//   console.log(event.code);
+// }
+
+// document.body.addEventListener('keydown', moveSquare);
+
+const div = document.querySelector('.square');
+const x = document.querySelector("[name='X']");
+const y = document.querySelector("[name='Y']");
+
+// console.log(x.value,y.value)
+
+x.addEventListener('input', () => {
+  div.style.transform = `translate(${x.value}px,${y.value}px)`;
+});
+
+y.addEventListener('input', () => {
+  div.style.transform = `translate(${x.value}px,${y.value}px)`;
+});
